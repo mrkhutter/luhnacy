@@ -5,7 +5,21 @@ class LuhnacyTest < Minitest::Test
     refute_nil ::Luhnacy::VERSION
   end
 
-  def test_it_does_something_useful
-    assert false
+  def test_it_validates_the_check_sum_on_7_digit_expression_that_matches_luhn_N_mod_algorithm
+    expression = "ErGLfG"
+    assert Luhnacy::Luhn.valid?(expression)
+  end
+
+  def test_it_invalidates_when_the_check_sum_does_not_match
+    expression = "vY9i2c"
+    refute Luhnacy::Luhn.valid?(expression)
+  end
+
+  def test_it_doubles_mods_and_adds_1_greater_than_5
+    assert Luhnacy::Luhn.double_and_evaluate(5), 5
+  end
+
+  def test_it_doubles_mods_and_adds_1_less_than_6
+    assert Luhnacy::Luhn.double_and_evaluate(3), 1
   end
 end
