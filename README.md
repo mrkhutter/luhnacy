@@ -23,7 +23,7 @@ Or install it yourself as:
 To check if a string is a valid implementation of Luhn:
 
 ```ruby
-Luhnacy::Luhn.valid("ErGLfG")
+Luhnacy::Luhn.valid?("ErGLfG")
 ```
 
 ## Development
