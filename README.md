@@ -1,6 +1,6 @@
 # Luhnacy
 
-Luhnacy is a small wrapper exposing basical validation of numeric strings against the [Luhn Algorithm](https://en.wikipedia.org/wiki/Luhn_algorithm).
+Luhnacy is a small wrapper exposing basical validation of alpha numeric strings against the [Luhn Algorithm](https://en.wikipedia.org/wiki/Luhn_algorithm). Luhnacy is using a Base64 encoding for alpha numeric strings.
 
 ## Installation
 
